@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import '../controllers/note_controller.dart';
 import '../models/note_model.dart';
 
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
       }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.toNamed('/add_note');
+          context.go('/add_note');
         },
         child: Icon(Icons.add),
       ),

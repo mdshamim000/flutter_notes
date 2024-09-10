@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import '../controllers/note_controller.dart';
 
 class AddNotePage extends StatelessWidget {
@@ -28,8 +29,8 @@ class AddNotePage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 noteController.addNote(
-                  titleController.text, descriptionController.text);
-                Get.back();
+                    titleController.text, descriptionController.text);
+                context.go('/home');
               },
               child: Text('Save Note'),
             ),

@@ -21,7 +21,7 @@ class AuthController extends GetxController {
   void register(BuildContext context, name, String email, String password) async {
     try {
       await _auth.createUserWithEmailAndPassword(email: email, password: password);
-      Get.offAllNamed('/home');
+      context.go('/home');
     } catch (e) {ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Error: ${e.toString()}')),
       );
